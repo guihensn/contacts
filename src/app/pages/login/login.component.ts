@@ -12,7 +12,11 @@ export class LoginComponent {
   password?: string;
   errorMessages?: string[];
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) {
+    if (localStorage.getItem('token')) {
+      this.router.navigate(['/contacts/list']);
+    }
+  }
   
   login() {
     if(this.validateFields() === false) return;
