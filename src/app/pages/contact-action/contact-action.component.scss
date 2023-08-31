@@ -1,0 +1,26 @@
+:host {
+    width: 100%;
+    min-height: 100%;
+}
+
+img{
+    width: 150px;
+    margin-bottom: 1em;
+    aspect-ratio: 1/1;
+
+    border-radius: 100%;
+}
+
+.content{
+    height: calc(100% - 50px);
+}
+
+.title{
+    padding: 10px;
+    margin-bottom: 1em;
+    background-color: rgb(0, 174, 255);
+}
+
+.delete{
+    background-color: rgb(255, 96, 96);
+}

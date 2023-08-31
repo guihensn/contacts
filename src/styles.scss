@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: url('https://media.discordapp.net/attachments/1070826578042429470/1129766508806021140/guihen_mountain_ultra_realistic_adventure_real_life_photography_a83c0df3-f669-4149-a9fe-a04c40205dfa.png?width=662&height=662');
+    background-size: cover;
+}
+
+.bevel-inset {
+    box-shadow: inset 0px 0px 10px black;
+}
+
+h1 {
+    text-align: center;
+    font: 1.5em sans-serif;
+
+    width: fit-content;
+    padding: 5px 30px;
+    border-radius: 30px;
+
+    background-color: rgb(63, 63, 63);
+}
+
+input,
+button {
+    all: unset
+}
+
+input,
+button {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+
+    padding: 10px;
+    border-radius: 5px;
+
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.269);
+}
+
+button {
+    cursor: pointer;
+    
+    color: white;
+    background-color: rgb(108, 202, 214);
+    
+    padding: 5px 15px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap-1 {
+    gap: 5px;
+}
+
+.gap-2 {
+    gap: 10px;
+}

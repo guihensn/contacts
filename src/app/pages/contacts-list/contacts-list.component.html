@@ -1,0 +1,29 @@
+<app-return-bar background="#334d61" [showGoBack]="false" title="Page List">
+    <div class="flex row justify-content-between">
+        <button class="logout" (click)="logout()">Deslogar</button>
+    </div>
+</app-return-bar>
+
+<div class="flex list column full-screen justify-content-around align-items-center">
+    <div class=" flex row align-items-center justify-content-center wrap gap-2">
+        <div class="flex row justify-content-center align-items-center gap-2 wrap ">
+            <ng-container *ngFor="let contact of contacts">
+                <div class="flex row align-items-center" [routerLink]="['/contact/edit', {id: contact.id}]">
+                    <img *ngIf="contact.foto !== ''" class="image" [src]="contact.foto" (error)="contact.foto = ''">
+                    <img *ngIf="contact.foto === ''" class="image" [src]="'assets/images/user-image-empty.png'">
+
+                    <div class="info flex column justify-content-center">
+                        <div class="date"> {{contact.dataCadastro | date:"dd / MMM / yyyy" }}</div>
+
+                        <div class="flex column">
+                            <div class="name">{{contact.nome}}</div>
+                            <div class="email">{{contact.email}}</div>
+                            <div class="phone">{{contact.telefone}}</div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <button class="new" [routerLink]="['/contact/new']">New</button>
+    </div>
+</div>

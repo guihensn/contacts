@@ -1,0 +1,16 @@
+:host{
+    background: url('https://media.discordapp.net/attachments/1070826578042429470/1129766508806021140/guihen_mountain_ultra_realistic_adventure_real_life_photography_a83c0df3-f669-4149-a9fe-a04c40205dfa.png?width=662&height=662');
+}
+.border {
+    width: min(900px, 100%);    
+
+    background: url('../assets/images/mountains.png');
+    background-size: cover;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(30px);
+}

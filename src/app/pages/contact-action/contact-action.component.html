@@ -1,0 +1,22 @@
+<div class="flex full-screen column">
+    <app-return-bar [background]="action === 'new' ? 'rgb(76 202 143)' : 'rgb(222 160 66)'"
+        [title]="action === 'new' ? 'Novo Usuário' : 'Editar usuário'"></app-return-bar>
+
+    <div class="content flex column align-items-center justify-content-center gap-1">
+        <img [src]="contact.foto ? contact.foto : 'assets/images/user-image-empty.png'">
+        <input [(ngModel)]="contact.foto" type="text" placeholder="URL do avatar">
+        <input [(ngModel)]="contact.nome" type="text" placeholder="nome">
+        <input [(ngModel)]="contact.email" type="text" placeholder="email">
+        <input [(ngModel)]="contact.telefone" type="text" placeholder="telefone">
+
+        <div class="flex row gap-1">
+            <button *ngIf="action === 'new'" (click)="create()">Create </button>
+            <ng-container *ngIf="action === 'edit'">
+                <button (click)="update()">Update</button>
+                <button class="delete" (click)="delete()">Delete</button>
+            </ng-container>
+        </div>
+
+        <app-error-message [messages]="errorMessages"></app-error-message>
+    </div>
+</div>

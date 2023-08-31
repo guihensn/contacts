@@ -1,0 +1,8 @@
+<div class="full-screen flex column align-items-center justify-content-center gap-1">
+    <img [src]="'assets/images/user-image-empty.png'" alt="avatar">
+    <input [(ngModel)]="user" placeholder="Usuário">
+    <input [(ngModel)]="password" placeholder="Senha" type="password">
+    <button (click)="login()">Logar</button>
+    <app-error-message [messages]="errorMessages"></app-error-message>
+</div>
+

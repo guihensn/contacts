@@ -1,0 +1,18 @@
+<div  class="bar-container flex row justify-content-between">
+    <div class="bar flex row align-items-center justify-content-between" [style.background]="background">
+        <div class="flex row align-center menu">
+            <svg *ngIf="showGoBack" (click)="goBack()" class="icon" [style.fill]="textColor" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                width="48">
+                <path d="m274-450 248 248-42 42-320-320 320-320 42 42-248 248h526v60H274Z" />
+            </svg>
+        <div class="flex row align-items-center justify-content-center menu">
+            <div class="title" [style.color]="textColor"> {{title}}</div>
+        </div>
+        </div>
+        <div class="flex row content gap-1 justify-content-center">
+            <ng-content></ng-content>
+        </div>
+    </div>
+
+
+</div>
